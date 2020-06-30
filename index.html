@@ -1,0 +1,103 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Rock, Paper, Scissors</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+</head>
+
+<body>
+  <script>
+  let cpuMove;
+  let playerScore = 0;
+  let computerScore = 0;  
+
+
+  function computerPlay() {
+      let cpu = ["rock", "paper", "scissors"];
+      let random = cpu[Math.floor(Math.random() * cpu.length)];
+      return cpuMove = random;
+  };
+
+  
+  function play(playerSelection, computerSelection) {
+    computerSelection = cpuMove;
+    playerSelection = playerMove;
+      
+      if (playerSelection === computerSelection){
+          return "Tie";
+      } else if (playerSelection === "rock" && computerSelection === "scissors"){
+          playerScore++;
+          return "Player wins";
+      } else if (playerSelection === "scissors" && computerSelection === "paper"){
+          playerScore++;
+          return "Player wins";
+      } else if (playerSelection === "paper" && computerSelection === "rock"){
+          playerScore++;
+          return "Player wins";
+      } else if (playerSelection === "paper" && computerSelection === "scissors"){
+          computerScore++;
+          return "Player loses";
+      } else if (playerSelection === "rock" && computerSelection === "paper"){
+          computerScore++;
+          return "Player loses";
+      } else if (playerSelection === "scissors" && computerSelection === "rock"){
+          computerScore++;
+          return "Player loses";   
+  }}
+  
+  function game() {
+    for (i = 0; i < 5; i++) {
+    playerMove = prompt("rock, paper, scissors").toLowerCase();
+    cpuMove = computerPlay();
+    console.log(play());
+    }
+    if (playerScore > computerScore) {
+        return "you win"
+    } else {
+        return "you lose"
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </script>
+</body>
+</html>
